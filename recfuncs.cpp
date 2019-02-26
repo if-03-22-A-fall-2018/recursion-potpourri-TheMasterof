@@ -10,12 +10,13 @@ int convert_to_binary(int num){
 }
 
 int* create_array(int size){
-  int name [size];
+  int* name= new int[size];
+  return name;
 }
 
-int calc_factoral(int num){
+int calc_factorial(int num){
   if (num>1) {
-    return num*calc_factoral(num-1);
+    return num*calc_factorial(num-1);
   }
   else{
     return 1;
