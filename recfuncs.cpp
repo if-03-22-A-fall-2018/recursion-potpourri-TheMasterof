@@ -1,7 +1,7 @@
 #include "recfuncs.h"
 #include <stdlib.h>
 
-int calc_array_size(int num){
+int calc_array_size(int n){
   if (n > 0)
  {
    return 2 * calc_array_size(n - 1);
@@ -10,7 +10,7 @@ int calc_array_size(int num){
 return 1;
 }
 
-int convert_to_binary(int num){
+int convert_to_binary(int n){
   if (n == 0)
   {
     return 0;
@@ -31,18 +31,13 @@ int* create_array(int size){
 return array;
 }
 
-int calc_factorial(int num){
-  int finalSize = calc_array_size(size);
-  int *array = new int[finalSize];
-
-  for (int i = 0; i < finalSize; i++)
+int calc_factorial(int n){
+  if(n==0)
   {
-    array[i] = -1;
+    return 1;
   }
-
-return array;
+return n*calc_factorial(n-1);
   }
-}
 
 void calc_sums(int* nums, int size, int* out_arr, int* out_arr_bin){
 

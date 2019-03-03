@@ -9,10 +9,10 @@ struct CalculationResults{
   int* num_factorials;
 };
 
-int calc_array_size(int num);
-int convert_to_binary(int num);
+int calc_array_size(int n);
+int convert_to_binary(int n);
 int* create_array(int size);
-int calc_factorial(int num);
+int calc_factorial(int size);
 void calc_sums(int* nums, int size, int* out_arr, int* out_arr_bin);
 CalculationResults perform_calculations(int* nums, int num);
 #endif
