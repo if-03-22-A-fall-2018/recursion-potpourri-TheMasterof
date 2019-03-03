@@ -2,24 +2,45 @@
 #include <stdlib.h>
 
 int calc_array_size(int num){
-  return 0;
+  if (n > 0)
+ {
+   return 2 * calc_array_size(n - 1);
+ }
+
+return 1;
 }
 
 int convert_to_binary(int num){
-  return 0;
+  if (n == 0)
+  {
+    return 0;
+  }
+
+  return n % 2 + 10 * convert_to_binary(n / 2);
 }
 
 int* create_array(int size){
-  int* name= new int[size];
-  return name;
+  int finalSize = calc_array_size(size);
+  int *array = new int[finalSize];
+
+  for (int i = 0; i < finalSize; i++)
+  {
+    array[i] = -1;
+  }
+
+return array;
 }
 
 int calc_factorial(int num){
-  if (num>1) {
-    return num*calc_factorial(num-1);
+  int finalSize = calc_array_size(size);
+  int *array = new int[finalSize];
+
+  for (int i = 0; i < finalSize; i++)
+  {
+    array[i] = -1;
   }
-  else{
-    return 1;
+
+return array;
   }
 }
 
